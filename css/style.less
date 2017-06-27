@@ -1,0 +1,199 @@
+@charset "utf-8";
+@import "lesslib.less";
+body {
+    background-image: url("../images/banner-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center -95/75*1rem;
+    background-size: 100%;
+    overflow: hidden;
+}
+// 标题
+.title {
+    .px2rem(margin-top, 25);
+}
+.title img {
+    width: 100%;
+}
+// 表单
+.form-box {
+    .px2rem(width, 700);
+    margin: 0 auto;
+    .px2rem(margin-top, 25);
+    .px2rem(padding-top, 36);
+    .px2rem(padding-left, 30);
+    .px2rem(padding-bottom, 36);
+    .px2rem(padding-right, 30);
+    background-color: rgba(255, 255, 255, .4);
+    .box-sizing();
+    .px2rem(border-radius, 10);
+    box-shadow: 0 5px 5px rgba(153, 153, 153, .75);
+}
+.form-group {
+    .flex();
+    .px2rem(margin-bottom, 10);
+    background-color: #fff;
+    .px2rem(border-radius, 10);
+    box-shadow: 0 5px 10px  rgba(153, 153, 153, .75);
+}
+.form-box .form-group:last-child {
+    margin-bottom: 0;
+}
+.form-group-title {
+    .px2rem(width, 180);
+    .px2rem(height, 100);
+    .px2rem(line-height, 100);
+    .px2px(font-size, 30);
+    color: #ffffff;
+    background-color: #90caf9;
+    text-align: center;
+    border-radius: 10/75*1rem 0 0 10/75*1rem;
+}
+.form-group-text {
+    .px2rem(width, 410);
+    .px2rem(height, 100);
+    .px2rem(line-height, 100);
+    .px2rem(padding-left, 30);
+    .px2px(font-size, 36);
+    color: #333333;
+    .box-sizing();
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap
+}
+.form-group-input {
+    .px2rem(width, 410);
+    .px2rem(height, 100);
+    .px2rem(padding-left, 30);
+    border: none;
+    .px2px(font-size, 36);
+    color: #333333;
+    .box-sizing();
+    text-overflow: ellipsis;
+}
+::-webkit-input-placeholder {
+    color: #333;
+}
+.icon-arr {
+    background: url("../images/arr.png") no-repeat center;
+    background-size: 18/75*1rem;
+    flex-grow: 1;
+}
+.form-group.act {
+    box-shadow: 0 0 15px rgba(13,71, 161, .75);
+}
+.form-group.act .form-group-title {
+    background-color: #2196f3;
+}
+.now-submit {
+    .px2rem(margin-top, 30);
+}
+.now-button {
+    .px2rem(width, 680);
+    .px2rem(height, 100);
+    margin: 0 auto;
+    background: url("../images/now-button.png") no-repeat center;
+    background-size: 100% 100%;
+}
+// 提示
+.tips {
+    .px2rem(margin-top, 25);
+    .px2rem(margin-bottom, 25);
+    text-align: center;
+    .px2px(font-size, 22);
+    color: #000;
+}
+// 弹窗
+.pop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .flex();
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .6);
+    display: none;
+}
+.pop.show {
+    .flex();
+}
+.pop-box {
+    .px2rem(width, 600);
+    background: #fff;
+    .px2rem(border-radius, 10);
+}
+.pop-content {
+    .px2rem(max-height, 660);
+    overflow-y: auto;
+}
+.pop-title {
+    .px2rem(padding-top, 45);
+    .px2rem(padding-bottom, 45);
+    text-align: center;
+    .px2px(font-size, 60);
+    color: #3f8de3;
+    font-weight: 700;
+    background-color: #edf3ff;
+    border-radius: 10/75*1rem 10/75*1rem 0 0;
+}
+.pop-list {
+    .px2rem(padding-left, 55);
+    .px2rem(padding-right, 55);
+}
+.pop-list li {
+    .flex();
+    justify-content: space-between;
+    .px2rem(line-height, 130);
+    .px2px(font-size, 36);
+    border-bottom: 1px solid #eeeeee;
+    color: #333333;
+}
+.pop-list-left {
+    .flex();
+}
+.pop-list-right .icon-check {
+    
+}
+.pop-icon {
+    .px2rem(width, 120);
+    .flex();
+    align-items: center;
+}
+.pop-icon img {
+    .px2rem(width, 70);
+}
+.pop-list-right {
+    .flex();
+    align-items: center;
+}
+.icon-check {
+    .px2rem(width, 40);
+    .px2rem(height, 40);
+    .border(#999999, 1, solid);
+}
+.icon-check.act {
+    border: none;
+    background: url("../images/icon-checked.jpg") no-repeat center;
+    background-size: 100%;
+}
+img.tip-text {
+    .px2rem(width, 214);
+}
+.tip-txt {
+    .px2px(font-size,40);
+    color: #333333;
+    text-align: center;
+    line-height: 1.8;
+    margin-top: 70/75*1rem;
+    margin-bottom: 60/75*1rem;
+}
+.ok-button {
+    width: 330/75*1rem;
+    line-height: 80/75*1rem;
+    background: #3d9bff;
+    border-radius: 80/75/2*1rem;
+    .px2px(font-size,36);
+    color: #fefefe;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 70/75*1rem;
+}

@@ -1,0 +1,90 @@
+// rem计算
+.px2rem(@name, @px){
+    @{name}: @px / 75 * 1rem;
+}
+// px转px
+.px2px(@name, @px){
+    @{name}: round(@px / 2) * 1px;
+    [data-dpr="2"] & {
+        @{name}: @px * 1px;
+    }
+    // for mx3
+    [data-dpr="2.5"] & {
+        @{name}: round(@px * 2.5 / 2) * 1px;
+    }
+    // for 小米note
+    [data-dpr="2.75"] & {
+        @{name}: round(@px * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+        @{name}: round(@px / 2 * 3) * 1px
+    }
+    // for 三星note4
+    [data-dpr="4"] & {
+        @{name}: @px * 2px;
+    }
+}
+// 背景
+.background (@url, @repeat:no-repeat, @position:center, @sizi:100% 100%) {
+    background-image: url(@url);
+    background-repeat: @repeat;
+    background-position: @position;
+    background-size: @sizi;
+}
+// 盒模型
+.box-sizing(@v:border-box) {
+    box-sizing: @v;
+    -moz-box-sizing: @v;
+    -webkit-box-sizing: @v;
+}
+// 圆角
+.round (@v:10) {
+    & {
+        border-radius: round(@v / 2) * 1px;
+        -moz-border-radius:round(@v / 2) * 1px;
+        -webkit-border-radius:round(@v / 2) * 1px;
+    };
+    [data-dpr="2"] & {
+        border-radius: @v * 1px;
+        -moz-border-radius:@v * 1px;
+        -webkit-border-radius:@v * 1px;
+    }
+    // for mx3
+    [data-dpr="2.5"] & {
+        border-radius: round(@v * 2.5 / 2) * 1px;
+        -moz-border-radius:round(@v * 2.5 / 2) * 1px;
+        -webkit-border-radius:round(@v * 2.5 / 2) * 1px; 
+    }
+    // for 小米note
+    [data-dpr="2.75"] & {
+        border-radius: round(@v * 2.75 / 2) * 1px;
+        -moz-border-radius:round(@v * 2.75 / 2) * 1px;
+        -webkit-border-radius:round(@v * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+        border-radius: round(@v / 2 * 3) * 1px;
+        -moz-border-radius:round(@v / 2 * 3) * 1px;
+        -webkit-border-radius:round(@v / 2 * 3) * 1px;
+    }
+    // for 三星note4
+    [data-dpr="4"] & {
+        border-radius: @v * 2px;
+        -moz-border-radius:@v * 2px;
+        -webkit-border-radius:@v * 2px;
+    }
+}
+// flex
+.flex () {
+    display: flex;
+    display: -webit-flex;
+}
+.inline-flex () {
+    display: inline-flex;
+    display: -webit-inline-flex;
+}
+// 边框
+.border (@color: #000, @width: 1, @style: solid) {
+    border-color: @color;
+    .px2px(border-width, 2);
+    border-style: @style;
+}

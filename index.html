@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />  
+    <meta name="apple-mobile-web-status-bar-style" content="black" />
+    <meta name="format-detecition" content="telephone=no" /> 
+    <meta name="format-detection" content="email=no" />
+    <script src="js/setRem.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset-app.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/zepto.min.js"></script>
+    <script src="js/fastclick.min.js"></script>
+    <title>录取预测</title>
+</head>
+<body style="visibility:hidden;">
+    <!-- 页面html代码开始 -->
+    <!-- title 开始 -->
+    <div class="title">
+        <img src="images/title.png" alt="" />
+    </div>
+    <!-- title 结束 -->
+    <!-- 表单填写 开始 -->
+    <form action="">
+        <div class="form-box">
+            <div id="gk-class" class="form-group">
+                <span class="form-group-title">高考科别</span>
+                <span class="form-group-text">理工科</span>
+                <i class="icon-arr"></i>
+            </div>
+            <div id="gk-syd" class="form-group">
+                <span class="form-group-title">高考生源地</span>
+                <span class="form-group-text">北京</span>
+                <i class="icon-arr"></i>
+            </div>
+            <div id="gk-mark" class="form-group">
+                <span class="form-group-title">高考成绩</span>
+                <input class="form-group-input gkcj" type="text" placeholder="705" />
+            </div>
+            <div id="dx-szd" class="form-group">
+                <span class="form-group-title">大学所在地</span>
+                <span class="form-group-text">北京</span>
+                <i class="icon-arr"></i>
+            </div>
+            <div id="dx-class" class="form-group">
+                <span class="form-group-title">大学类型</span>
+                <span class="form-group-text">211</span>
+                <i class="icon-arr"></i>
+            </div>
+            <div id="dx-chose" class="form-group">
+                <span class="form-group-title">选择大学</span>
+                <span class="form-group-text">北京大学</span>
+                <i class="icon-arr"></i>
+            </div>
+        </div>
+        <div class="now-submit">
+            <a class="now-button" href="javascript:;"></a>
+        </div>
+    </form>
+    <!-- 表单填写 结束 -->
+    <!-- 提示 开始 -->
+    <div class="tips">
+        本系统页面结果仅供参考，不构成任何承诺。
+    </div>
+    <!-- 提示 结束 -->
+    <!-- 高考类别弹窗 -->
+    <div class="pop gk-class">
+        <div class="pop-box">
+            <div class="pop-title">高考类别</div>
+            <div class="pop-content">
+                <ul class="pop-list">
+                    <li>
+                        <div class="pop-list-left">
+                            <div class="pop-icon">
+                                <img src="images/icon-li.png" alt="" />
+                            </div>
+                            <span class="pop-text">理工科</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check act"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <div class="pop-icon">
+                                <img src="images/icon-wen.png" alt="" />
+                            </div>
+                            <span class="pop-text">文史科</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <div class="pop-icon">
+                                <img src="images/icon-zong.png" alt="" />
+                            </div>
+                            <span class="pop-text">综合</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 高考生源地弹窗 -->
+    <div class="pop gk-syd">
+        <div class="pop-box">
+            <div class="pop-title">高考生源地</div>
+            <div class="pop-content">
+                <ul class="pop-list">
+                    <li>
+                        <div class="pop-list-left">
+                            <div class="pop-icon">
+                                <img src="images/icon-bj.jpg" alt="" />
+                            </div>
+                            <span class="pop-text">北京市</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check act"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <div class="pop-icon">
+                                <img src="images/icon-tj.jpg" alt="" />
+                            </div>
+                            <span class="pop-text">天津市</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <div class="pop-icon">
+                                <img src="images/icon-sd.jpg" alt="" />
+                            </div>
+                            <span class="pop-text">山东省</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <div class="pop-icon">
+                                <img src="images/icon-hb.jpg" alt="" />
+                            </div>
+                            <span class="pop-text">河北省</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <div class="pop-icon">
+                                <img src="images/icon-js.jpg" alt="" />
+                            </div>
+                            <span class="pop-text">江苏省</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 大学所在地弹窗 -->
+    <div class="pop dx-szd">
+        <div class="pop-box">
+            <div class="pop-title">高考生源地</div>
+            <div class="pop-content">
+                <ul class="pop-list">
+                    <li>
+                        <div class="pop-list-left">
+                            <span class="pop-text">北京市</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check act"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <span class="pop-text">天津市</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <span class="pop-text">山东省</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <span class="pop-text">河北省</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <span class="pop-text">江苏省</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 大学类型弹窗 -->
+    <div class="pop dx-class">
+        <div class="pop-box">
+            <div class="pop-title">高考生源地</div>
+            <div class="pop-content">
+                <ul class="pop-list">
+                    <li>
+                        <div class="pop-list-left">
+                            <div class="pop-icon">
+                                <img src="images/icon-211.jpg" alt="" />
+                            </div>
+                            <span class="pop-text">211</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check act"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <div class="pop-icon">
+                                <img src="images/icon-985.jpg" alt="" />
+                            </div>
+                            <span class="pop-text">985</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <div class="pop-icon">
+                                <img src="images/icon-puto.jpg" alt="" />
+                            </div>
+                            <span class="pop-text">普通高校</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 选择大学弹窗 -->
+    <div class="pop dx-chose">
+        <div class="pop-box">
+            <div class="pop-title">选择大学</div>
+            <div class="pop-content">
+                <ul class="pop-list">
+                    <li>
+                        <div class="pop-list-left">
+                            <span class="pop-text">北方工业大学</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check act"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <span class="pop-text">北京城市学院</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <span class="pop-text">北京第二外国语学院</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <span class="pop-text">北京服装学院</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pop-list-left">
+                            <span class="pop-text">北京工商大学</span>
+                        </div>
+                        <div class="pop-list-right">
+                            <i class="icon-check"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 提示弹窗 -->
+    <div class="pop numTip" style="display: none;">
+        <div class="pop-box">
+            <div class="pop-title">
+                <img class="tip-text" src="images/tip-text.png" />
+            </div>
+            <div class="pop-content">
+                <p class="tip-txt">成绩只能填写数字哦！<br />快快检查一下吧~</p>
+                <a class="ok-button" href="javascript:;">好的</a>
+            </div>
+        </div>
+    </div>
+    <!-- 页面html代码结束 -->
+    <script type="text/javascript">setTimeout(function () {document.getElementsByTagName('body')[0].style.visibility='visible';},100)</script>
+    <script src="js/index.js"></script>
+</body>
+</html>

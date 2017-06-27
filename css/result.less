@@ -1,0 +1,89 @@
+@charset "utf-8";
+@import "lesslib.less";
+body {
+    background: #fdfce8;
+}
+.tip-top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    .px2rem(height, 60);
+    .px2rem(line-height, 60);
+    background: #fff59d;
+    .px2rem(font-size, 30);
+    color: #333333;
+    text-align: center;
+}
+.tip-top .font-red {
+    color: #ff4168;
+}
+.wrapper {
+    .px2rem(top, 60);
+    width: 100%;
+}
+.header {
+    .flex();
+    justify-content: space-between;
+}
+.target-school {
+    .px2rem(margin-left, 26);
+}
+.target-school .school-pic {
+    .px2rem(width, 287);
+    .px2rem(margin-top, 20);
+    .px2rem(margin-bottom, 28);
+}
+.school-name {
+    .px2px(font-size, 50);
+    font-weight: 700;
+    color: #333333;
+}
+.header-banner img {
+    display: block;
+    .px2rem(width, 325);
+}
+.admit-title {
+    .px2rem(margin-top, 10);
+}
+.admit-title img {
+    display: block;
+    margin: 0 auto;
+    .px2rem(width, 682);
+}
+.admit-title-list {
+    .flex();
+    justify-content: space-around;
+    .px2rem(margin-top, 5);
+}
+.admit-result-list {
+    
+}
+.admit-title-item img {
+    .px2rem(width, 203);
+}
+.admit-result-ul {
+    .px2rem(padding-left, 30);
+    .px2rem(padding-right, 30);
+}
+.admit-result-ul li {
+    .px2rem(min-height, 100);
+    .px2px(font-size, 30);
+    color: #333333;
+    .px2px(border-bottom-width, 2);
+    border-bottom-color: #eeeeee;
+    border-bottom-style: solid;
+    .flex();
+    justify-content: space-between;
+    align-items: center;
+}
+.admit-result-ul li span {
+    .px2rem(width, 200);
+    text-align: center;
+}
+.tip-bottom {
+    .px2rem(padding-left, 30);
+    .px2px(font-size, 24);
+    color: #333333;
+    .px2rem(margin-top, 40);
+    .px2rem(margin-bottom, 40);
+}
